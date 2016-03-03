@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  german: MyString
+  english: MyString
+  spanish: MyString
+  type: 
+  past: MyString
+  future: MyString
+  past_verb_helper: MyString
+
+two:
+  german: MyString
+  english: MyString
+  spanish: MyString
+  type: 
+  past: MyString
+  future: MyString
+  past_verb_helper: MyString
