@@ -109,6 +109,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  jwt
   knock (~> 1.2)
   pg
   rack-cors

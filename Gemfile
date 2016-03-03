@@ -9,6 +9,8 @@ gem 'knock', '~> 1.2'
 
 gem 'rack-cors'
 
+gem 'jwt'
+
 gem 'spring', :group => :development
 
 

@@ -8,7 +8,7 @@ Knock.setup do |config|
   ## the user_id is stored in the 'sub' claim.
   ##
   ## Default:
-  # config.current_user_from_token = -> (claims) { User.find claims['sub'] }
+  config.current_user_from_token = -> (claims) { User.find claims['sub'] }
 
 
   ## Expiration claim
