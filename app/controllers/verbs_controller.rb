@@ -1,6 +1,6 @@
 class VerbsController < ApplicationController
   before_action :set_verb, only: [:show, :update, :destroy]
-  before_action :authenticate
+  before_action :validateToken
 
 
   # GET /verbs

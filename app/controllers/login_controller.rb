@@ -3,7 +3,7 @@ require 'jwt'
 class LoginController < ApplicationController
 
   def index
-  	token = request.headers['HTTP_AUTHENTICATION_KETCHUZ']
+  	token = request.headers['HTTP_AUTHENTICATION']
 
   	# claims = JWT.decode token, nil, false
 
