@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  clientId: MyString
+  user_id: 2
   token: MyString
-  third_party_id: MyString
+  connection: MyString
 
 two:
   name: MyString
-  clientId: MyString
+  user_id: 1
   token: MyString
-  third_party_id: MyString
+  connection: MyString

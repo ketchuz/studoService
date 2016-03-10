@@ -11,6 +11,24 @@ class VerbsController < ApplicationController
     render json: @verbs
   end
 
+  # Get just 10 random verbs from DB
+  def ten_random
+    @verbs = Verb.order("RANDOM()").limit(10)
+    render json: @verbs
+  end
+
+  def register_score
+    @current_user
+    params[:scores].each do |score|
+      verb = Verb.find(score[:verbId])
+      score = verb.scores.where(user: @current_user).first_or_create
+      score.num_tries += 1
+      score.num_correct += score[:isCorrect] ? 1 : 0
+      score.efficiency_percentage = score.num_correct.to_f / score.num_tries.to_f
+      score.save!
+    end
+  end
+
   # GET /verbs/1
   # GET /verbs/1.json
   def show

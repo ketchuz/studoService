@@ -2,7 +2,8 @@ require 'test_helper'
 
 class VerbsControllerTest < ActionController::TestCase
   setup do
-    @verb = verbs(:one)
+    @verb = verbs(:haben)
+    
   end
 
   test "should get index" do
@@ -36,4 +37,10 @@ class VerbsControllerTest < ActionController::TestCase
 
     assert_response 204
   end
+
+  test 'should get ten random verbs' do
+    get :ten_random
+    assert_equal 10, assigns(:verbs).count , 'Not getting 10 random verbs'
+  end
+
 end

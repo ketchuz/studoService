@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   
   post 'login' => 'login#index'
+  get 'verbs/ten_random' => 'verbs#ten_random'
+  post 'verbs/register_score' => 'verbs#register_score'
 
-  resources :verbs, except: [:new, :edit]
+  resources :verbs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

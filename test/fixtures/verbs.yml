@@ -1,19 +1,91 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  german: MyString
-  english: MyString
-  spanish: MyString
+sein:
+  german: sein
+  english: to be
+  spanish: ser
   type: 
-  past: MyString
-  future: MyString
-  past_verb_helper: MyString
+  past: 
+  future: 
+  past_verb_helper: 
 
-two:
-  german: MyString
-  english: MyString
-  spanish: MyString
+haben:
+  german: haben
+  english: have
+  spanish: tener
   type: 
-  past: MyString
-  future: MyString
-  past_verb_helper: MyString
+  past: 
+  future: 
+  past_verb_helper: 
+
+müssen:
+  german: müssen
+  english: to be
+  spanish: ser
+  type: 
+  past: 
+  future: 
+  past_verb_helper: 
+
+können:
+  german: haben
+  english: have
+  spanish: tener
+  type: 
+  past: 
+  future: 
+  past_verb_helper: 
+
+machen:
+  german: sein
+  english: to be
+  spanish: ser
+  type: 
+  past: 
+  future: 
+  past_verb_helper: 
+
+kaufen:
+  german: haben
+  english: have
+  spanish: tener
+  type: 
+  past: 
+  future: 
+  past_verb_helper: 
+
+wissen:
+  german: müssen
+  english: to be
+  spanish: ser
+  type: 
+  past: 
+  future: 
+  past_verb_helper: 
+
+sollen:
+  german: haben
+  english: have
+  spanish: tener
+  type: 
+  past: 
+  future: 
+  past_verb_helper: 
+
+wollen:
+  german: sein
+  english: to be
+  spanish: ser
+  type: 
+  past: 
+  future: 
+  past_verb_helper: 
+
+mögen:
+  german: haben
+  english: have
+  spanish: tener
+  type: 
+  past: 
+  future: 
+  past_verb_helper: 
