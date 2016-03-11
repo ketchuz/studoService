@@ -17,15 +17,33 @@ class VerbsController < ApplicationController
     render json: @verbs
   end
 
+  def ten_to_improve
+    puts 'The range is: ' + params[:range].to_s
+    range = params[:range]
+    range ||= 0.7
+    @verbs = []
+    scores = Score.where(user: @current_user).where('efficiency_percentage < ?', range)
+    scores.each do |s| 
+      puts 'Verb id! : ' + s.scorable_id.to_s
+      verb_id = s.scorable_id 
+      @verbs.push(Verb.find(verb_id))
+    end
+
+    puts @verbs
+    render json: @verbs
+
+  end
+
   def register_score
     @current_user
     params[:scores].each do |score|
       verb = Verb.find(score[:verbId])
-      score = verb.scores.where(user: @current_user).first_or_create
-      score.num_tries += 1
-      score.num_correct += score[:isCorrect] ? 1 : 0
-      score.efficiency_percentage = score.num_correct.to_f / score.num_tries.to_f
-      score.save!
+      s = verb.scores.where(user: @current_user).first_or_create
+      s.num_tries += 1
+      s.num_correct += score[:isCorrect] ? 1 : 0
+      puts 'Num correct: ' + s.num_correct.to_s + ' | was correct ? ' + score[:isCorrect].to_s
+      s.efficiency_percentage = s.num_correct.to_f / s.num_tries.to_f
+      s.save!
     end
   end
 
