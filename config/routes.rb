@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'verbs/ten_random' => 'verbs#ten_random'
   post 'verbs/register_score' => 'verbs#register_score'
   get 'verbs/ten_to_improve' => 'verbs#ten_to_improve'
+  get 'verbs/query_verb' => 'verbs#query_verb'
+  
   resources :verbs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

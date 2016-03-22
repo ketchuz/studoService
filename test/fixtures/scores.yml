@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_tries: 1
+  num_correct: 1
+  efficiency_percentage: 1.5
+  user_id: 
+
+two:
+  num_tries: 1
+  num_correct: 1
+  efficiency_percentage: 1.5
+  user_id: 

@@ -34,6 +34,18 @@ class VerbsController < ApplicationController
 
   end
 
+  def query_verb
+    q = params[:q]
+    if q != nil
+      @verbs = Verb.where("german LIKE ?" , "%#{q}%")
+      if @verbs.count > 0
+        puts @verbs.first.german
+      end
+      render json: @verbs
+    end
+    
+  end
+
   def register_score
     @current_user
     params[:scores].each do |score|
